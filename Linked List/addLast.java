@@ -23,6 +23,10 @@ class LinkedList {
         size++;
     }
 
+    public int size(){
+        return size;
+    }
+
     void display() {
         Node temp = head;
         while (temp != null) {
@@ -50,5 +54,6 @@ public class addLast {  // Ensure this matches the filename
 
         System.out.println("Linked List:");
         list.display();
+        System.out.println("Linked List size:"+list.size());
     }
 }
