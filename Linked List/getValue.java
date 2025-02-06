@@ -48,38 +48,6 @@ class LinkedList {
         }
         return 0;
     }
-
-    public int getFirst(){
-        if(size == 0){
-            System.out.println("List empty");
-            return -1;
-        }else {
-            return head.data;
-        }
-    }
-    public int getLast(){
-        if(size == 0){
-            System.out.println("List empty");
-            return -1;
-        }else {
-            return tail.data;
-        }
-    }
-      public int getAt(int idx){   // idx parameter
-        if(size == 0){
-            System.out.println("List empty");
-            return -1;
-        }else if(idx < 0 || idx >= size){
-            System.out.println("Invalid Argument");
-            return -1;
-        }else {
-            Node temp = head;            
-            for(int i = 0; i < idx; i++){
-                temp = temp.next;
-            }
-            return temp.data;
-        }
-    }
 }
 
 public class addLast {  // Ensure this matches the filename
@@ -98,22 +66,13 @@ public class addLast {  // Ensure this matches the filename
         }
 
         System.out.println("Linked List:");
-        
         list.display();
         System.out.println("Linked List size:"+list.size());
 
         list.removeFirst();
 
         list.display();
-
         System.out.println("new Linked List size:"+list.size());
 
-        System.out.println("First element:"+list.getFirst());
-        System.out.println("Last element:"+list.getLast());
-
-        System.out.print("Enter index to fetch element: ");
-        int index = Integer.parseInt(br.readLine().trim());
-
-        System.out.println("Element at index "+ index + " is: "+list.getAt(index));
     }
 }
