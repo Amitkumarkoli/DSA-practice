@@ -35,6 +35,19 @@ class LinkedList {
         }
         System.out.println();
     }
+
+    int removeFirst(){
+        if(size==0){
+            System.out.println("List is empty");
+        }else if(size == 1){
+            head = tail = null;
+            size = 0;
+        }else {
+            head = head.next;
+            size--;
+        }
+        return 0;
+    }
 }
 
 public class addLast {  // Ensure this matches the filename
@@ -55,5 +68,11 @@ public class addLast {  // Ensure this matches the filename
         System.out.println("Linked List:");
         list.display();
         System.out.println("Linked List size:"+list.size());
+
+        list.removeFirst();
+
+        list.display();
+        System.out.println("new Linked List size:"+list.size());
+
     }
 }
