@@ -65,7 +65,7 @@ class LinkedList {
             return tail.data;
         }
     }
-      public int getAt(int idx){   // idx parameter
+      public int getAt(int idx){   
         if(size == 0){
             System.out.println("List empty");
             return -1;
@@ -80,9 +80,21 @@ class LinkedList {
             return temp.data;
         }
     }
+
+    public void addFirst(int val) {
+        Node temp = new Node();
+        temp.data = val;
+        temp.next = head;
+        head = temp;
+
+        if(size == 0){
+            tail = temp;
+        }
+        size++;
+    }
 }
 
-public class addLast {  // Ensure this matches the filename
+public class addLast {  
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         LinkedList list = new LinkedList();
@@ -98,7 +110,7 @@ public class addLast {  // Ensure this matches the filename
         }
 
         System.out.println("Linked List:");
-        
+
         list.display();
         System.out.println("Linked List size:"+list.size());
 
@@ -115,5 +127,12 @@ public class addLast {  // Ensure this matches the filename
         int index = Integer.parseInt(br.readLine().trim());
 
         System.out.println("Element at index "+ index + " is: "+list.getAt(index));
+
+        System.out.println("Enter element to add in first: ");
+        int firstElement = Integer.parseInt((br.readLine().trim()));
+        list.addFirst(firstElement);
+
+        System.out.println("New Linked List: ");
+        list.display();
     }
 }
