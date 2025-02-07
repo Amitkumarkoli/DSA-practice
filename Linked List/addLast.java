@@ -131,6 +131,23 @@ class LinkedList {
             size--;
         }
     }
+
+    public void removeAt(int idx){
+        if(idx < 0 || idx >= size){
+            System.out.println("Invalid arguments");
+        }else if(idx == 0){
+            removeFirst();
+        }else if(idx == size - 1){
+            removeLast();
+        }else {
+            Node temp = head;
+            for(int i = 0; i < idx - 1; i++ ){
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            size--;
+        }
+    }
 }
 
 public class addLast {  
@@ -191,5 +208,17 @@ public class addLast {
         System.out.println("New Linked List: ");
         list.display();
         System.out.println("Linked List size:"+list.size());
+
+
+
+        System.out.print("Enter index to remove: ");
+        int removeIndex = Integer.parseInt(br.readLine().trim());
+
+        list.removeAt(removeIndex);
+
+        System.out.println("New Linked List after removing at index " + removeIndex + ":");
+        list.display();
+        System.out.println("Linked List size: " + list.size());
+
     }
 }
