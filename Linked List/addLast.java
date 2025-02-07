@@ -148,6 +148,31 @@ class LinkedList {
             size--;
         }
     }
+
+    private Node getNodeAt(int idx){
+        Node temp = head;
+        for(int i = 0; i<idx; i++){
+            temp = temp.next;
+        }
+        return temp;
+    }
+    
+    public void reverseDI(){
+        int li = 0;
+        int ri = size - 1;
+
+        while(li < ri){
+            Node left = getNodeAt(li);
+            Node right = getNodeAt(ri);
+
+            int temp = left.data;
+            left.data = right.data;
+            right.data = temp;
+
+            li++;
+            ri--;
+        }
+    }
 }
 
 public class addLast {  
@@ -220,5 +245,11 @@ public class addLast {
         list.display();
         System.out.println("Linked List size: " + list.size());
 
+
+        System.out.println("Reversing the Linked List...");
+        list.reverseDI();
+        
+        System.out.println("Reversed Linked List:");
+        list.display();
     }
 }
