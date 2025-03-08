@@ -1,79 +1,6 @@
-// public void removeDuplicates(){
-//     LinkedList res = new LinkedList();
-
-//     while(this.size() > 0){
-//         int val = this.getFirst();
-//         this.removeFirst();
-
-//         if(res.size() == 0 || res.tail.data != val){
-//             res.addLast(val);
-//         }
-//     }
-
-//     this.head = res.head;
-//     this.tail = res.tail;
-//     this.size = res.size;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import java.util.*;
 
-class removeDuplicates {  // Updated class name to match file name
+class removeDuplicates {  
     private static class Node {
         int data;
         Node next;
@@ -88,7 +15,7 @@ class removeDuplicates {  // Updated class name to match file name
     private Node tail;
     private int size;
 
-    public removeDuplicates() {  // Updated constructor to match class name
+    public removeDuplicates() {  
         this.head = this.tail = null;
         this.size = 0;
     }
@@ -127,7 +54,7 @@ class removeDuplicates {  // Updated class name to match file name
     }
 
     public void removeDuplicates() {
-        removeDuplicates res = new removeDuplicates(); // Updated to match new class name
+        removeDuplicates res = new removeDuplicates(); 
 
         while (this.size() > 0) {
             int val = this.getFirst();
@@ -153,7 +80,7 @@ class removeDuplicates {  // Updated class name to match file name
     }
 
     public static void main(String[] args) {
-        removeDuplicates list = new removeDuplicates(); // Updated object instantiation
+        removeDuplicates list = new removeDuplicates(); 
         list.addLast(1);
         list.addLast(1);
         list.addLast(2);

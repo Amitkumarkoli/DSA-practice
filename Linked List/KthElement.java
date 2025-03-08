@@ -25,7 +25,7 @@ public class KthElement {
             }
         }
         
-        // kth element from last without using size and iterative method
+        // kth element from last without using size and use iterative method
         public int kthFromLast(int k) {
             Node s = head;  // Slow pointer
             Node f = head;  // Fast pointer
@@ -37,7 +37,7 @@ public class KthElement {
                 }
                 f = f.next;
             }
-
+ 
             while (f != tail) {
                 s = s.next;
                 f = f.next;

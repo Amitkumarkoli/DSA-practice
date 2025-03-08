@@ -26,8 +26,8 @@ public class middleElement {
         }
 
         public int mid() {
-            Node s = head;
-            Node f = head;
+            Node s = head; // slow pointer
+            Node f = head; // fast pointer
 
             while (f.next != null && f.next.next != null) {
                 s = s.next;

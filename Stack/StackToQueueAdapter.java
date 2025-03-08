@@ -54,6 +54,6 @@ class StackToQueueAdapter {
         System.out.println("Front element: " + queue.peek()); // Output: 10
         System.out.println("Removed element: " + queue.remove()); // Output: 10
         System.out.println("Removed element: " + queue.remove()); // Output: 20
-        System.out.println("Queue size: " + queue.size()); // Output: 1
+        System.out.println("Queue size: " + queue.size()); // Output: 2
     }
 }
